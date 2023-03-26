@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Data\ERS.HotWheels.Collectors.Infra.Data.Repository.csproj" />
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.Interfaces\ERS.HotWheels.Collectors.Domain.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

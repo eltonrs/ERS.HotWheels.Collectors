@@ -1,5 +1,24 @@
-## Chronological list of Hot Wheels series
+#### Chronological list of Hot Wheels series
 https://hotwheels.fandom.com/wiki/Chronological_list_of_Hot_Wheels_series
 
+#### Relational DB (container Docker)
 
+https://hub.docker.com/_/microsoft-mssql-server
 
+#### EF Core
+
+## Para criar uma tabela no banco:
+
+1 - Criar entidades (no Domain)
+2 - Criar mapeamento (Infra.Data.Mapping)
+3 - Aplicar o mapeamento no contexto (Infra.Data.Context.OnModelCreating(...))
+
+## Relações
+
+https://www.entityframeworktutorial.net/efcore/configure-one-to-one-relationship-using-fluent-api-in-ef-core.aspx
+https://www.entityframeworktutorial.net/efcore/configure-one-to-many-relationship-using-fluent-api-in-ef-core.aspx
+https://www.entityframeworktutorial.net/efcore/configure-many-to-many-relationship-in-ef-core.aspx
+
+## Para usar Lazy Loading
+
+https://stackoverflow.com/questions/41881169/navigation-property-should-be-virtual-not-required-in-ef-core

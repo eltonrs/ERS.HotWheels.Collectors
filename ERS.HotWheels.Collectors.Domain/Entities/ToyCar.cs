@@ -7,11 +7,17 @@ namespace ERS.HotWheels.Collectors.Domain.Entities
         public string Name { get; set; }
         public DateTime ReleaseYear { get; set; }
         public Guid BrandId { get; set; }
-        public Guid CollectionId { get; set; }
         public int? CollectionIndex { get; set; }
         public string? Tampography { get; set; }
-        public Guid WheelTypeId { get; set; }
+        
+        public Guid? WheelTypeId { get; set; }
+        public WheelType? WheelType { get; set; }
 
-        // Images
+        public Guid CollectionId { get; set; }
+        public Collection? Collection { get; set; }
+
+        // ToDo : Images
+
+        // ToDo : Validators (IValidators)
     }
 }
