@@ -24,33 +24,16 @@ namespace ERS.HotWheels.Collectors.Infra.Data.Context
 
         #endregion
 
-        public HotWheelsCollectorsContext() { }
-
-        public HotWheelsCollectorsContext(DbContextOptions<HotWheelsCollectorsContext> dbContextOptions) : base(dbContextOptions)
+        public HotWheelsCollectorsContext(DbContextOptions<HotWheelsCollectorsContext> dbContextOptions)
+            : base(dbContextOptions)
         {
 
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder
-                .UseSqlServer(
-                    @"string connection", // pegar da connections string no appsettings
-                    sqlServerOption =>
-                    {
-                        // Resiliência da conexão: habilita a opção do EF Core de reconectar em caso de falhas
-                        sqlServerOption.EnableRetryOnFailure(
-                            maxRetryCount: 2,
-                            maxRetryDelay: TimeSpan.FromSeconds(5),
-                            errorNumbersToAdd: null
-                        )
-                        .MigrationsAssembly("ERS.HotWheels.Collectors.Infra.Data.Migrations");
-
-                        //opt.MigrationsHistoryTable("EFMigrationsHistoryCurso"); // É possível alterar o nome da tabela onde são armazenados registros de execução do migrations (a tabela padrão do EF para histórico).
-                        // IMPORTANTE: Isso deve ser feito antes do primeiro deploy, se não, a tabela anterior (nome padrão) continua.
-                    }
-                )
-                .EnableSensitiveDataLogging(true);// CUIDADO!!! // Por padrão, o EF não exibe os valores dos parâmetros nos logs. Essa opção habilita a visualização dos parâmetros no console.
+            // Dá pra fazer aqui (OnConfiguring)...
+            //   tudo que foi feito aqui "ERS.HotWheels.Collectors.Infra.Data.Context.HotWheelsCollectorsContextConfiguration"
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -62,8 +45,6 @@ namespace ERS.HotWheels.Collectors.Infra.Data.Context
             modelBuilder.ApplyConfiguration(new WheelTypeConfiguration());
 
             /* Configurações "automáticas". Configura todas as classes que herdam de IEntityTypeConfiguration<TEntity> que estão no assembly tal... */
-
-
         }
     }
 }

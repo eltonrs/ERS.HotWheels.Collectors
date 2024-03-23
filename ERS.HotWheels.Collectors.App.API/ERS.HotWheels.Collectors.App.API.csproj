@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Data.Context\ERS.HotWheels.Collectors.Infra.Data.Context.csproj" />
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Data.Migrations\ERS.HotWheels.Collectors.Infra.Data.Migrations.csproj" />
     <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.IoC\ERS.HotWheels.Collectors.Infra.IoC.csproj" />
   </ItemGroup>
 

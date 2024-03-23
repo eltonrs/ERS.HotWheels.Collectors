@@ -8,7 +8,7 @@ namespace ERS.HotWheels.Collectors.Domain.Entities
         public string? DescriptionType { get; set; }
         public string? Notes { get; set; }
 
-        public ICollection<ToyCar>? ToyCars { get; set; }
+        public virtual ICollection<ToyCar>? ToyCars { get; set; }
 
         public WheelType() { }
 

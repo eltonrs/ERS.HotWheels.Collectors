@@ -9,9 +9,12 @@ namespace ERS.HotWheels.Collectors.Domain.Entities
         public DateTime? EndDate { get; set; }
         public int? TotalToyCar { get; set; }
 
-        public ICollection<ToyCar>? ToyCars { get; set; }
+        public virtual ICollection<ToyCar>? ToyCars { get; set; }
 
-        public Collection() { }
+        public Collection()
+        {
+            Name = "Default Name";
+        }
 
         public Collection(
             string name, 

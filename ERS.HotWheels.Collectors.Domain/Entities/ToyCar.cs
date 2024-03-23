@@ -11,10 +11,10 @@ namespace ERS.HotWheels.Collectors.Domain.Entities
         public string? Tampography { get; set; }
         
         public Guid? WheelTypeId { get; set; }
-        public WheelType? WheelType { get; set; }
+        public virtual WheelType? WheelType { get; set; }
 
         public Guid CollectionId { get; set; }
-        public Collection? Collection { get; set; }
+        public virtual Collection? Collection { get; set; }
 
         // ToDo : Images
 

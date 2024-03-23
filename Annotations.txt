@@ -30,5 +30,12 @@ https://stackoverflow.com/questions/41881169/navigation-property-should-be-virtu
 
 docker compose -f ./SqlServerDocker.yml up -d
 
-## Migrations
+#### Migrations
 
+## Adicionar uma migration via PowerShell (estando no diretório raiz)
+
+dotnet ef --startup-project .\ERS.HotWheels.Collectors.App.API\ERS.HotWheels.Collectors.App.API.csproj --project .\ERS.HotWheels.Collectors.Infra.Data.Migrations\ERS.HotWheels.Collectors.Infra.Data.Migrations.csproj migrations add Initial --verbose
+
+## Atualizar o banco de dados com a migration
+
+dotnet ef --project .\ERS.HotWheels.Collectors.App.API\ERS.HotWheels.Collectors.App.API.csproj database update
