@@ -3,38 +3,45 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Domain", "ERS.HotWheels.Collectors.Domain\ERS.HotWheels.Collectors.Domain.csproj", "{EEBE9DA1-B9D4-47E1-8A4F-19FD34B848FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Domain", "ERS.HotWheels.Collectors.Domain\ERS.HotWheels.Collectors.Domain.csproj", "{EEBE9DA1-B9D4-47E1-8A4F-19FD34B848FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC7A94C7-5302-4B7F-BF69-B47085E184C1}"
 	ProjectSection(SolutionItems) = preProject
 		Annotations.txt = Annotations.txt
+		YAMLs\SqlServerDocker.yml = YAMLs\SqlServerDocker.yml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{79A77B48-60B1-4903-BD4B-6EE93CE8319D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{79A77B48-60B1-4903-BD4B-6EE93CE8319D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Infra.Data.Repository", "ERS.HotWheels.Collectors.Infra.Data\ERS.HotWheels.Collectors.Infra.Data.Repository.csproj", "{17D8CBDA-2950-4FC1-B0DA-DF763AF1D911}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Infra.Data.Repository", "ERS.HotWheels.Collectors.Infra.Data.Repository\ERS.HotWheels.Collectors.Infra.Data.Repository.csproj", "{17D8CBDA-2950-4FC1-B0DA-DF763AF1D911}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{325B4D25-F7F8-4436-BA7B-3D97DE10F5F0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{325B4D25-F7F8-4436-BA7B-3D97DE10F5F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Domain.Interfaces", "ERS.HotWheels.Collectors.Interfaces\ERS.HotWheels.Collectors.Domain.Interfaces.csproj", "{3988A9E8-25E5-40AD-8FA8-7EE2C5C459B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Domain.Interfaces", "ERS.HotWheels.Collectors.Domain.Interfaces\ERS.HotWheels.Collectors.Domain.Interfaces.csproj", "{3988A9E8-25E5-40AD-8FA8-7EE2C5C459B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Infra.Data.Context", "ERS.HotWheels.Collectors.Infra.Context\ERS.HotWheels.Collectors.Infra.Data.Context.csproj", "{9196632C-001C-41A5-8F0B-07C5EFC6704E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Infra.Data.Context", "ERS.HotWheels.Collectors.Infra.Data.Context\ERS.HotWheels.Collectors.Infra.Data.Context.csproj", "{9196632C-001C-41A5-8F0B-07C5EFC6704E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F7124D32-C660-40D9-94CE-7FCF97B06B51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Infra.Data.Mapping", "ERS.HotWheels.Collectors.Infra.Data.Mapping\ERS.HotWheels.Collectors.Infra.Data.Mapping.csproj", "{CB9FF691-0EFD-4491-BB1F-F7800F5BB48C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Infra.Data.Mapping", "ERS.HotWheels.Collectors.Infra.Data.Mapping\ERS.HotWheels.Collectors.Infra.Data.Mapping.csproj", "{CB9FF691-0EFD-4491-BB1F-F7800F5BB48C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{009FB9AF-7CAB-4789-AE0C-585C56608402}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - App", "1 - App", "{009FB9AF-7CAB-4789-AE0C-585C56608402}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.App.API", "ERS.HotWheels.Collectors.App.API\ERS.HotWheels.Collectors.App.API.csproj", "{A3CF490A-1EFE-42AA-9DD9-DF93AC54D906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.App.API", "ERS.HotWheels.Collectors.App.API\ERS.HotWheels.Collectors.App.API.csproj", "{A3CF490A-1EFE-42AA-9DD9-DF93AC54D906}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.App.Core", "ERS.HotWheels.Collectors.App.Core\ERS.HotWheels.Collectors.App.Core.csproj", "{968A1371-A121-486F-BDD1-09449F5763B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.App.Core", "ERS.HotWheels.Collectors.App.Core\ERS.HotWheels.Collectors.App.Core.csproj", "{968A1371-A121-486F-BDD1-09449F5763B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.App.Core.Interfaces", "ERS.HotWheels.Collectors.App.Core.Interfaces\ERS.HotWheels.Collectors.App.Core.Interfaces.csproj", "{24828EB7-6C62-4ED4-BB66-ADA573596058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.App.Core.Interfaces", "ERS.HotWheels.Collectors.App.Core.Interfaces\ERS.HotWheels.Collectors.App.Core.Interfaces.csproj", "{24828EB7-6C62-4ED4-BB66-ADA573596058}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{01BE409A-29E1-465E-A3B4-E58779D1D6DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Infra.IoC", "ERS.HotWheels.Collectors.Infra.IoC\ERS.HotWheels.Collectors.Infra.IoC.csproj", "{147AB2E8-C7A1-4FBA-9701-E2447C14B9D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Infra.IoC", "ERS.HotWheels.Collectors.Infra.IoC\ERS.HotWheels.Collectors.Infra.IoC.csproj", "{147AB2E8-C7A1-4FBA-9701-E2447C14B9D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Infra.Data.Migrations", "ERS.HotWheels.Collectors.Infra.Data.Migrations\ERS.HotWheels.Collectors.Infra.Data.Migrations.csproj", "{2D54DA35-F27B-4849-9AFC-C392D7827D5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.App.MigrationsApplicator", "ERS.HotWheels.Collectors.App.MigrationsApplicator\ERS.HotWheels.Collectors.App.MigrationsApplicator.csproj", "{77B14493-5908-47DB-8005-4D627A7C596F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Core", "3 - Core", "{CB366215-37C0-4606-B5A6-80413668ECD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +85,14 @@ Global
 		{147AB2E8-C7A1-4FBA-9701-E2447C14B9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{147AB2E8-C7A1-4FBA-9701-E2447C14B9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{147AB2E8-C7A1-4FBA-9701-E2447C14B9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D54DA35-F27B-4849-9AFC-C392D7827D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D54DA35-F27B-4849-9AFC-C392D7827D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D54DA35-F27B-4849-9AFC-C392D7827D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D54DA35-F27B-4849-9AFC-C392D7827D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B14493-5908-47DB-8005-4D627A7C596F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B14493-5908-47DB-8005-4D627A7C596F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B14493-5908-47DB-8005-4D627A7C596F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B14493-5908-47DB-8005-4D627A7C596F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,10 +105,12 @@ Global
 		{F7124D32-C660-40D9-94CE-7FCF97B06B51} = {79A77B48-60B1-4903-BD4B-6EE93CE8319D}
 		{CB9FF691-0EFD-4491-BB1F-F7800F5BB48C} = {F7124D32-C660-40D9-94CE-7FCF97B06B51}
 		{A3CF490A-1EFE-42AA-9DD9-DF93AC54D906} = {009FB9AF-7CAB-4789-AE0C-585C56608402}
-		{968A1371-A121-486F-BDD1-09449F5763B3} = {009FB9AF-7CAB-4789-AE0C-585C56608402}
-		{24828EB7-6C62-4ED4-BB66-ADA573596058} = {009FB9AF-7CAB-4789-AE0C-585C56608402}
+		{968A1371-A121-486F-BDD1-09449F5763B3} = {CB366215-37C0-4606-B5A6-80413668ECD1}
+		{24828EB7-6C62-4ED4-BB66-ADA573596058} = {CB366215-37C0-4606-B5A6-80413668ECD1}
 		{01BE409A-29E1-465E-A3B4-E58779D1D6DE} = {79A77B48-60B1-4903-BD4B-6EE93CE8319D}
 		{147AB2E8-C7A1-4FBA-9701-E2447C14B9D2} = {01BE409A-29E1-465E-A3B4-E58779D1D6DE}
+		{2D54DA35-F27B-4849-9AFC-C392D7827D5E} = {F7124D32-C660-40D9-94CE-7FCF97B06B51}
+		{77B14493-5908-47DB-8005-4D627A7C596F} = {009FB9AF-7CAB-4789-AE0C-585C56608402}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83BB4917-33AF-4839-96B4-19C2DB18D663}

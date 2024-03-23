@@ -1,4 +1,3 @@
-
 using ERS.HotWheels.Collectors.Infra.Data.Context;
 using ERS.HotWheels.Collectors.Infra.IoC;
 

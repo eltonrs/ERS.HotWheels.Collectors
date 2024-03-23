@@ -1,14 +1,8 @@
 ﻿using ERS.HotWheels.Collectors.Domain.Entities;
 using ERS.HotWheels.Collectors.Infra.Data.Mapping.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ERS.HotWheels.Collectors.Infra.Context
+namespace ERS.HotWheels.Collectors.Infra.Data.Context
 {
     public class HotWheelsCollectorsContext : DbContext
     {
@@ -49,7 +43,8 @@ namespace ERS.HotWheels.Collectors.Infra.Context
                             maxRetryCount: 2,
                             maxRetryDelay: TimeSpan.FromSeconds(5),
                             errorNumbersToAdd: null
-                        );
+                        )
+                        .MigrationsAssembly("ERS.HotWheels.Collectors.Infra.Data.Migrations");
 
                         //opt.MigrationsHistoryTable("EFMigrationsHistoryCurso"); // É possível alterar o nome da tabela onde são armazenados registros de execução do migrations (a tabela padrão do EF para histórico).
                         // IMPORTANTE: Isso deve ser feito antes do primeiro deploy, se não, a tabela anterior (nome padrão) continua.

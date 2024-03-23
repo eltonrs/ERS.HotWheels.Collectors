@@ -1,6 +1,6 @@
 ﻿using ERS.HotWheels.Collectors.Domain.Entities.Base;
 using ERS.HotWheels.Collectors.Domain.Interfaces.Repositories.Base;
-using ERS.HotWheels.Collectors.Infra.Context;
+using ERS.HotWheels.Collectors.Infra.Data.Context;
 
 namespace ERS.HotWheels.Collectors.Infra.Data.Repository.Repositories.Base
 {

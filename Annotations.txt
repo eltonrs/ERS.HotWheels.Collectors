@@ -22,3 +22,13 @@ https://www.entityframeworktutorial.net/efcore/configure-many-to-many-relationsh
 ## Para usar Lazy Loading
 
 https://stackoverflow.com/questions/41881169/navigation-property-should-be-virtual-not-required-in-ef-core
+
+#### SQL Server
+
+## Docker compose command
+# O arquivo yAML está na pasta do Ubuntu (~/projects/dotnet/ERS.HotWheels.Collectors)
+
+docker compose -f ./SqlServerDocker.yml up -d
+
+## Migrations
+
