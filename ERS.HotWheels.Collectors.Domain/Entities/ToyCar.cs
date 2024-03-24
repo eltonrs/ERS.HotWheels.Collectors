@@ -15,9 +15,13 @@ namespace ERS.HotWheels.Collectors.Domain.Entities
 
         public Guid CollectionId { get; set; }
         public virtual Collection? Collection { get; set; }
-
         // ToDo : Images
 
+        public ToyCar()
+        {
+            Name = string.Empty;
+        }
+        
         // ToDo : Validators (IValidators)
     }
 }

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ERS.HotWheels.Collectors.Domain.Interfaces\ERS.HotWheels.Collectors.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Cqrs.Commands\ERS.HotWheels.Collectors.Infra.Cqrs.Commands.csproj" />
     <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Data.Repository\ERS.HotWheels.Collectors.Infra.Data.Repository.csproj" />
   </ItemGroup>
 

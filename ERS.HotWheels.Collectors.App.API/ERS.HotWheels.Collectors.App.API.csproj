@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
       <PrivateAssets>all</PrivateAssets>
@@ -16,6 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.App.Core\ERS.HotWheels.Collectors.App.Core.csproj" />
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Cqrs.Commands\ERS.HotWheels.Collectors.Infra.Cqrs.Commands.csproj" />
     <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Data.Context\ERS.HotWheels.Collectors.Infra.Data.Context.csproj" />
     <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Data.Migrations\ERS.HotWheels.Collectors.Infra.Data.Migrations.csproj" />
     <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.IoC\ERS.HotWheels.Collectors.Infra.IoC.csproj" />

@@ -1,48 +1,52 @@
 ﻿using ERS.HotWheels.Collectors.Domain.Entities.Base;
 using ERS.HotWheels.Collectors.Domain.Interfaces.Repositories.Base;
 using ERS.HotWheels.Collectors.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace ERS.HotWheels.Collectors.Infra.Data.Repository.Repositories.Base
 {
-    public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
-        where TEntity : EntityBase
+    public abstract class RepositoryBase<TEntity>(HotWheelsCollectorsContext context) // < Primary ctor
+        : IRepositoryBase<TEntity> where TEntity : EntityBase
     {
-        protected readonly HotWheelsCollectorsContext _context;
+        protected readonly HotWheelsCollectorsContext _context = context;
+        protected readonly DbSet<TEntity> _dbSet = context.Set<TEntity>();
 
-        public RepositoryBase(HotWheelsCollectorsContext context)
-        {
-            _context = context;
-        }
+        public void Add(TEntity entity)
+            => _dbSet.Add(entity);
+
+        public async Task<TEntity?> GetByIdAsync(
+            Guid id,
+            CancellationToken cancellationToken = default
+        )
+            => await _dbSet
+                .Where(e => e.Id == id)
+                .FirstOrDefaultAsync(cancellationToken);
+
+        public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
+            => await _dbSet.ToListAsync(cancellationToken);
 
         public void Delete(TEntity entity)
-        {
-            _context.Set<TEntity>().Remove(entity);
-        }
+            => _dbSet.Remove(entity);
 
         public void DeleteById(Guid id)
         {
-            var entity = FindById(id);
-            _context.Set<TEntity>().Remove(entity);
-        }
+            var entity = _dbSet.Find($"id,{id}"); // ToDo : Is this right?
 
-        public TEntity FindById(Guid id)
-        {
-            return _context
-                .Set<TEntity>()
-                .Where(e => e.Id == id)
-                .FirstOrDefault();
-        }
+            if (entity is null)
+                throw new ArgumentNullException(nameof(entity));
 
-        public IEnumerable<TEntity> GetAll()
-        {
-            return _context
-                .Set<TEntity>()
-                .ToList();
+            _dbSet.Remove(entity);
         }
 
         public void Update(TEntity entity)
         {
-            _context.Set<TEntity>().Update(entity);
+            if (entity is null)
+                throw new ArgumentNullException(nameof(entity));
+
+            _dbSet.Update(entity);
         }
+
+        public int Save()
+            => _context.SaveChanges();
     }
 }

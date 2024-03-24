@@ -5,5 +5,6 @@ namespace ERS.HotWheels.Collectors.Domain.Interfaces.Repositories
 {
     public interface IToyCarRepository : IRepositoryBase<ToyCar>
     {
+        
     }
 }
