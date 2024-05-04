@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SqlKata" Version="2.4.0" />
+    <PackageReference Include="SqlKata.Execution" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.App.Core\ERS.HotWheels.Collectors.App.Core.csproj" />
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.Domain\ERS.HotWheels.Collectors.Domain.csproj" />
+    <ProjectReference Include="..\ERS.HotWheels.Collectors.Infra.Data.Dapper\ERS.HotWheels.Collectors.Infra.Data.Dapper.csproj" />
+  </ItemGroup>
+
+</Project>

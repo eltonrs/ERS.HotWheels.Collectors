@@ -1,14 +1,16 @@
-﻿using ERS.HotWheels.Collectors.App.Core.Dtos.ToyCarEntity;
+﻿using ERS.HotWheels.Collectors.App.Core.Dtos.Queries;
+using ERS.HotWheels.Collectors.App.Core.Dtos.ToyCarEntity;
 using ERS.HotWheels.Collectors.Domain.Entities;
 using ERS.HotWheels.Collectors.Domain.Interfaces.Repositories;
 using ERS.HotWheels.Collectors.Infra.Cqrs.Commands.Handlers.ToyCarEntity.Insert;
+using ERS.HotWheels.Collectors.Infra.Data.Queries.Queries.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ERS.HotWheels.Collectors.App.API.Controllers.Entities
 {
     [ApiController]
-    [Route("Entities")]
+    [Route("[controller]")]
     public class ToyCarController : Controller
     {
         private readonly ILogger<ToyCarController> _logger;
@@ -34,7 +36,30 @@ namespace ERS.HotWheels.Collectors.App.API.Controllers.Entities
             return Ok(toyCars.Any() ? toyCars.ToArray() : Array.Empty<ToyCar>());
         }
 
-        [HttpGet("id:guid")]
+        [HttpGet("by-collection")]
+        public async Task<ActionResult<IEnumerable<CollectionsDetailsDto>>> GetByCollectionAsync(
+            CancellationToken cancellationToken,
+            [FromServices] IToyCarQuery toyCarRepositoryComplex)
+        {
+            var toyCarsDetails = await toyCarRepositoryComplex.ListToyCarsAsync(cancellationToken);
+
+            return Ok(toyCarsDetails.Count != 0 ? [.. toyCarsDetails] : Array.Empty<CollectionsDetailsDto>());
+        }
+
+        [HttpGet("{collectionId:guid}/Count")]
+        public async Task<ActionResult<IEnumerable<ToyCar>>> GetCountByCollectionAsync(
+            Guid collectionId,
+            CancellationToken cancellationToken,
+            [FromServices] IToyCarQuery toyCarRepositoryComplex)
+        {
+            var count = await toyCarRepositoryComplex.GetCountByCollectionAsync(
+                collectionId,
+                cancellationToken);
+
+            return Ok(count);
+        }
+
+        [HttpGet("{id:guid}")]
         public async Task<ActionResult<ToyCarDetailsDto>> GetByIdAsync(
             Guid id,
             CancellationToken cancellationToken

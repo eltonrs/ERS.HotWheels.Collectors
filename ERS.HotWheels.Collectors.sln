@@ -43,9 +43,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Core", "3 - Core", "{CB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cqrs", "Cqrs", "{1C88BF43-7BFF-4236-B563-E49E1A1ED328}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Infra.Cqrs.Commands", "ERS.HotWheels.Collectors.Infra.Cqrs.Commands\ERS.HotWheels.Collectors.Infra.Cqrs.Commands.csproj", "{73720025-C975-4721-B816-0C3F911D7906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Infra.Cqrs.Commands", "ERS.HotWheels.Collectors.Infra.Cqrs.Commands\ERS.HotWheels.Collectors.Infra.Cqrs.Commands.csproj", "{73720025-C975-4721-B816-0C3F911D7906}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Infra.Cqrs.Queries", "ERS.HotWheels.Collectors.Infra.Cqrs.Queries\ERS.HotWheels.Collectors.Infra.Cqrs.Queries.csproj", "{AD26CFF8-28D7-421D-8231-068320279151}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS.HotWheels.Collectors.Infra.Cqrs.Queries", "ERS.HotWheels.Collectors.Infra.Cqrs.Queries\ERS.HotWheels.Collectors.Infra.Cqrs.Queries.csproj", "{AD26CFF8-28D7-421D-8231-068320279151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Infra.Data.Dapper", "ERS.HotWheels.Collectors.Infra.Data.Dapper\ERS.HotWheels.Collectors.Infra.Data.Dapper.csproj", "{A13FF1A6-D0EF-4A0C-B8CB-B9831013C135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS.HotWheels.Collectors.Infra.Data.Queries", "ERS.HotWheels.Collectors.Infra.Data.RepositoryComplex\ERS.HotWheels.Collectors.Infra.Data.Queries.csproj", "{AC50574A-40E9-473A-8DB0-36FEAD85F98F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +105,14 @@ Global
 		{AD26CFF8-28D7-421D-8231-068320279151}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD26CFF8-28D7-421D-8231-068320279151}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD26CFF8-28D7-421D-8231-068320279151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13FF1A6-D0EF-4A0C-B8CB-B9831013C135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13FF1A6-D0EF-4A0C-B8CB-B9831013C135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13FF1A6-D0EF-4A0C-B8CB-B9831013C135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13FF1A6-D0EF-4A0C-B8CB-B9831013C135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC50574A-40E9-473A-8DB0-36FEAD85F98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC50574A-40E9-473A-8DB0-36FEAD85F98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC50574A-40E9-473A-8DB0-36FEAD85F98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC50574A-40E9-473A-8DB0-36FEAD85F98F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,6 +133,8 @@ Global
 		{1C88BF43-7BFF-4236-B563-E49E1A1ED328} = {79A77B48-60B1-4903-BD4B-6EE93CE8319D}
 		{73720025-C975-4721-B816-0C3F911D7906} = {1C88BF43-7BFF-4236-B563-E49E1A1ED328}
 		{AD26CFF8-28D7-421D-8231-068320279151} = {1C88BF43-7BFF-4236-B563-E49E1A1ED328}
+		{A13FF1A6-D0EF-4A0C-B8CB-B9831013C135} = {F7124D32-C660-40D9-94CE-7FCF97B06B51}
+		{AC50574A-40E9-473A-8DB0-36FEAD85F98F} = {F7124D32-C660-40D9-94CE-7FCF97B06B51}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83BB4917-33AF-4839-96B4-19C2DB18D663}

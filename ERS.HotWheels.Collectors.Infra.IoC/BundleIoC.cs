@@ -1,5 +1,8 @@
 ﻿using ERS.HotWheels.Collectors.Domain.Interfaces.Repositories;
 using ERS.HotWheels.Collectors.Infra.Cqrs.Commands.Handlers.ToyCarEntity.Insert;
+using ERS.HotWheels.Collectors.Infra.Data.Dapper;
+using ERS.HotWheels.Collectors.Infra.Data.Queries.Queries;
+using ERS.HotWheels.Collectors.Infra.Data.Queries.Queries.Interfaces;
 using ERS.HotWheels.Collectors.Infra.Data.Repository.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,6 +23,9 @@ namespace ERS.HotWheels.Collectors.Infra.IoC
                     //,typeof(ToyCarDeleteHandler).Assembly
                 );
             });
+
+            services.AddScoped<IDapperContext, DapperContext>();
+            services.AddScoped<IToyCarQuery, ToyCarQuery>();
         }
     }
 }
